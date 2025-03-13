@@ -14,4 +14,4 @@ Technologie których użyłem: JS, TS, PostgreSQL, Insomnia (do testów), Data G
 ### Baza danych
 Baza danych została postawiona na PostgreSQL, natomiast jej model oraz graficzne przedstawienie załączam poniżej
 
-Graficzne przedstawienie bazy danych - ([creenshots/database scheme.png](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/screenshots/database%20scheme.png))
+Graficzne przedstawienie bazy danych - [creenshots/database scheme.png](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/screenshots/database%20scheme.png)
