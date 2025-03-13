@@ -14,10 +14,10 @@ Technologie których użyłem: JS, TS, PostgreSQL, Insomnia (do testów), Data G
 ### Baza danych
 Baza danych została postawiona na PostgreSQL, natomiast jej model, migracje oraz graficzne przedstawienie załączam poniżej
 
-##Model bazy danych
+##Model bazy danych </br>
 ![model](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/screenshots/model.PNG) </br>
 
-##Graficzne przedstawienie bazy danych
+##Graficzne przedstawienie bazy danych </br>
 ![database scheme](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/screenshots/database%20scheme.png) </br>
 
 Migracja tabeli z składnikami - [ingredients migration](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/database/migrations/1741698583854_create_ingredients_table.ts) </br>
