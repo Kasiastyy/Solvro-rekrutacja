@@ -18,3 +18,7 @@ Model bazy danych - [model](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/
 Graficzne przedstawienie bazy danych - [database scheme](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/screenshots/database%20scheme.png) </br>
 Migracja tabeli z składnikami - [ingredients migration](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/database/migrations/1741698583854_create_ingredients_table.ts) </br>
 Migracja tabeli z koktajlami - [cocktail migration](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/database/migrations/1741697833587_create_cocktail_table.ts)
+
+
+### Testy
+Testy zostały przeprowadzone za pomocą programu Insomnia, preset testów znajduje się - [tutaj](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/insomnia_tests/Insomnia_2025-03-13.json)
