@@ -20,6 +20,7 @@ Baza danych została postawiona na PostgreSQL, natomiast jej model, migracje ora
 #### Graficzne przedstawienie bazy danych </br>
 ![database scheme](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/screenshots/database%20scheme.png) </br>
 
+### Migracje
 Migracja tabeli z składnikami - [ingredients migration](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/database/migrations/1741698583854_create_ingredients_table.ts) </br>
 Migracja tabeli z koktajlami - [cocktail migration](https://github.com/Kasiastyy/Solvro-rekrutacja/blob/main/database/migrations/1741697833587_create_cocktail_table.ts)
 
