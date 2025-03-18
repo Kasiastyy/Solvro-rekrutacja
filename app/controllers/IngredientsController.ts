@@ -2,6 +2,8 @@ import Ingredient from '#models/ingredient';
 import Cocktail from '#models/cocktail';
 
 export default class IngredientsController {
+
+  //Create
   async store({ request, response }) {
     const { name, description, alcohol, type, percentage, imageUrl, cocktailId } = request.body();
     await Ingredient.create({ name, description, alcohol, type, percentage, imageUrl, cocktailId });
@@ -9,17 +11,20 @@ export default class IngredientsController {
     response.status(201).send({ message: 'Record has been created successfully.' });
   }
 
+  //Read
   async show({ request, response }) {
     const { id } = request.params();
     const ingredient = await Ingredient.findBy('id', parseInt(id));
     response.status(200).send(ingredient);
   }
 
+  //Read all
   async index({ response }) {
     const ingredients = await Ingredient.all();
     response.status(200).send(ingredients);
   }
 
+  //Update
   async update({ request, response }) {
     const { id } = request.params();
     const id1 = parseInt(id);
@@ -30,6 +35,7 @@ export default class IngredientsController {
     response.status(201).send({ message: 'Record has been updated successfully.' });
   }
 
+  //Delete
   async destroy({ request, response }) {
     const { id } = request.params();
     const ingredient = await Ingredient.findOrFail(parseInt(id));
