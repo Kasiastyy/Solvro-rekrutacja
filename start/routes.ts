@@ -18,4 +18,4 @@ router.get('/seed', async ({ response }) => {
 // Resource routes
 router.resource('cocktails', CocktailsController);
 router.resource('ingredients', IngredientsController);
-router.post('cocktails/:id/ingredients', 'CocktailsController.addToCocktail');
+router.post('cocktails/:id/ingredients', '#controllers/CocktailsController.addToCocktail');
