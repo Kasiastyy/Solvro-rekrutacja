@@ -1,29 +1,30 @@
 import Cocktail from '#models/cocktail'
 import Ingredient from '#models/ingredient'
+import { HttpContext } from '@adonisjs/core/http'
 export default class CocktailsController {
 
   // Create
-  async store({ response, request }: { response: any; request: any }) {
+  async store({ response, request }: HttpContext) {
     const data = request.only(['name', 'category', 'glass', 'tags', 'instructions', 'imageUrl', 'alcoholic'])
     await Cocktail.create(data)
     response.status(201).send({ message: 'Record has been created successfully.' })
   }
 
   // Read
-  async show({ response, params }: { response: any; params: any }) {
+  async show({ response, params }: HttpContext) {
     const { id } = params
     const cocktail = await Cocktail.find(id)
     response.status(200).send(cocktail)
   }
 
   // Read all
-  async index({ response }: { response: any }) {
+  async index({ response }: HttpContext) {
     const cocktails = await Cocktail.all()
     response.status(200).send(cocktails)
   }
 
   // Update
-  async update({ response, request, params }: { response: any; request: any; params: any }) {
+  async update({ response, request, params }: HttpContext) {
     const { id } = params
     const data = request.only(['name', 'category', 'glass', 'tags', 'instructions', 'imageUrl', 'alcoholic'])
     const cocktail = await Cocktail.findOrFail(id)
@@ -33,7 +34,7 @@ export default class CocktailsController {
   }
 
   // Delete
-  async destroy({ response, params }: { response: any; params: any }) {
+  async destroy({ response, params }: HttpContext) {
     const { id } = params
     const cocktail = await Cocktail.findOrFail(id)
     await cocktail.delete()
@@ -41,7 +42,7 @@ export default class CocktailsController {
   }
 
   // Add to cocktail
-  async addToCocktail({ request, response, params }) {
+  async addToCocktail({ request, response, params }: HttpContext) {
     const { id } = params;
     const { name, description, alcohol, type, percentage, imageUrl } = request.body();
     const cocktail = await Cocktail.find(id);
